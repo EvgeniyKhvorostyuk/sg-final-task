@@ -1,17 +1,24 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+    <div class="content fullwidth">
+        <div class="container pt">
+        home
+        <div class="panel-heading">Dashboard</div>
 
-                <div class="panel-body">
-                    You are logged in!
+        <div class="panel-body">
+            You are logged in!
+        </div>
+            {{-- @foreach($profiles as $profile)
+                <div class="one_third team last">
+                    <div class="title">{{ $profile->name }} {{ $profile->lastname }}</div>
+
+                    <div class="image" style="background: none;"><img src="http://elegantica.premiumcoding.com/wp-content/uploads/2012/06/teamMember1.jpg" style="display: inline;"></div>
+
+                    <p class="description">{{ $profile->about}}</p>
+
                 </div>
-            </div>
+            @endforeach --}}
         </div>
     </div>
-</div>
 @endsection
