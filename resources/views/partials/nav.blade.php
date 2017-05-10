@@ -23,9 +23,10 @@
                 @else
                     <li>
                         <a href="#">
-                            {{ Auth::user()->username }}
+                            {{ auth()->user()->username }}
                         </a>
                     </li>
+                    <li><a href="{{ route('createProfile', auth()->user()->username )}}">Create Profile</a></li>
                     <li>
                         <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();
