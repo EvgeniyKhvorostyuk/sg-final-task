@@ -13,7 +13,7 @@
         <div class="row mt">    
             <div class="col-lg-8 col-lg-offset-2">
                 <form class="form-horizontal" role="form" method="POST" enctype="multipart/form-data" 
-                    action="{{ route('createProfile', auth()->user()->username ) }}">
+                    action="{{ route('profile.store', auth()->user()->username ) }}">
                     {{ csrf_field() }}
 
                     <div class="form-group">

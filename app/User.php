@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Profile;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -29,6 +30,11 @@ class User extends Authenticatable
 
     public function profile()
     {
-        $this->hasOne(\App\Profile::class);
+        return $this->hasOne(Profile::class);
+    }
+
+    public function publish(Profile $profile)
+    {
+        $this->profile()->save($profile);
     }
 }

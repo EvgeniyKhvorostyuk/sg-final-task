@@ -13,7 +13,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/">Profiles</a></li>
+                {{-- <li><a href="{{ route('home', auth()->user()->username )}}">Home</a></li> --}}
             </ul>
             <ul class="nav navbar-nav navbar-right">
             <!-- Authentication Links -->
@@ -21,12 +21,8 @@
                     <li><a href="{{ route('login') }}">Login</a></li>
                     <li><a href="{{ route('register') }}">Register</a></li>
                 @else
-                    <li>
-                        <a href="#">
-                            {{ auth()->user()->username }}
-                        </a>
-                    </li>
-                    <li><a href="{{ route('createProfile', auth()->user()->username )}}">Create Profile</a></li>
+                    {{-- <li><a href="{{ route('profile.show', auth()->user()->username ) }}">My profile</a></li> --}}
+                    <li><a href="{{ route('profile.create', auth()->user()->username )}}">Create Profile</a></li>
                     <li>
                         <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();

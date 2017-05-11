@@ -7,11 +7,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 centered">
-                profile
-                    {{-- @if (!isset($profile->image))
-                        <img src="{{ asset('images/' . 'user.png') }}" alt="Stanley">
+                <div class="panel-body">
+                    @if (!isset($profile->image))
+                        <img src="{{ asset('images/' . 'user.png') }}" width="170" height="170" alt="userimage">
                     @else
-                        <img class="img-circle" src="{{ asset('images/' . $profile->image) }}" alt="Stanley">
+                        <img class="img-circle" src="{{ asset('images/' . $profile->image) }}" alt="userimage">
                     @endif
                     
                     <h1>Hi, I am {{ $profile->name }} {{ $profile->lastname }}!</h1>
@@ -23,7 +23,7 @@
                       <strong><i class="fa fa-envelope"></i> Email</strong> : {{ $profile->user->email }}<br>
                       <strong><i class="fa fa-github"></i> GitHub Link</strong> : {{ $profile->git_link }}<br>
                       <strong><i class="fa fa-location-arrow"></i> Addressed</strong> : {{ $profile->address }}<br>
-                    </p> --}}
+                    </p>
                 </div><!-- /col-lg-8 -->
             </div><!-- /row -->
         </div> <!-- /container -->

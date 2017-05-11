@@ -3,13 +3,7 @@
 @section('content')
     <div class="content fullwidth">
         <div class="container pt">
-        home
-        <div class="panel-heading">Dashboard</div>
-
-        <div class="panel-body">
-            You are logged in!
-        </div>
-            {{-- @foreach($profiles as $profile)
+            @foreach($profiles as $profile)
                 <div class="one_third team last">
                     <div class="title">{{ $profile->name }} {{ $profile->lastname }}</div>
 
@@ -18,7 +12,7 @@
                     <p class="description">{{ $profile->about}}</p>
 
                 </div>
-            @endforeach --}}
+            @endforeach
         </div>
     </div>
 @endsection
