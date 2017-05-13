@@ -71,9 +71,11 @@ class ProfileController extends Controller
 
     }
 
-    public function show(User $user, Profile $profile)
+    public function show($username, $id)
     {
+        $profile = Profile::find($id);
+        $username = Auth::user()->username;
 
-        return view('layouts.profile', compact('user', 'profile'));
+        return view('layouts.profile')->with('profile', $profile)->with('username', $username);
     }
 }

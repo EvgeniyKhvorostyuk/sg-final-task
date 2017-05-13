@@ -7,7 +7,7 @@
                 <div class="one_third team last">
                     <div class="title">{{ $profile->name }} {{ $profile->lastname }}</div>
 
-                    <div class="image" style="background: none;"><img src="http://elegantica.premiumcoding.com/wp-content/uploads/2012/06/teamMember1.jpg" style="display: inline;"></div>
+                    <div class="image" style="background: none;"><img src="{{ asset('images/' . $profile->image) }}" style="display: inline;"></div>
 
                     <p class="description">{{ $profile->about}}</p>
 
