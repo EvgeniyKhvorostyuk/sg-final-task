@@ -127,8 +127,11 @@ class ProfileController extends Controller
             $fileName = time() . '.' . $image->getClientOriginalExtension();
             $location = public_path('images/' . $fileName);
             Image::make($image)->resize(170, 170)->save($location);
+            $oldFileName = $profile->image;
 
-            $profile->image = $fileName; 
+            $profile->image = $fileName;
+
+            Storage::delete($oldFileName); 
         }
 
         $profile->save();
