@@ -25,7 +25,7 @@
                           <strong><i class="fa fa-location-arrow"></i> Addressed</strong> : {{ $profile->address }}<br>
                         </p>
                     </div>
-                    @if (Auth::check() && auth()->user()->profile != null)
+                    @if (Auth::check() && auth()->user()->profile != null && auth()->user()->profile->id == $profile->id)
                         <div class="row">
                             <div class="col-sm-6">
                                 <a href="{{ route('profile.edit', [$profile->user->username, $profile->id]) }}" class="btn btn-primary btn-block" style="color: #ffffff" >Edit</a>

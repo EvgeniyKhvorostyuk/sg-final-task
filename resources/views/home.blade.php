@@ -14,7 +14,7 @@
                 <div class="one_third team last">
                     <div class="title">
                         <a href="
-                            @if (Auth::check() && isset(auth()->user()->profile))
+                            @if (Auth::check() && auth()->user()->profile != null && auth()->user()->profile->id == $profile->id)
                                 {{ route('profile.show', [auth()->user()->username, auth()->user()->profile->id] ) }}
                             @else 
                                 {{route('profile.getProfile', $profile->id)}}
